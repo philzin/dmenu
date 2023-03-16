@@ -364,7 +364,7 @@ keypress(XKeyEvent *ev)
 			break;
 		case XK_v: /* paste selection */
 		case XK_V:
-			XConvertSelection(dpy, (ev->state & ShiftMask) ? clip : XA_PRIMARY,
+			XConvertSelection(dpy, (ev->state & ShiftMask) ? XA_PRIMARY : clip,
 			                  utf8, utf8, win, CurrentTime);
 			return;
 		case XK_Left:
